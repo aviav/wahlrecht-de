@@ -70,7 +70,8 @@ Gem::Specification.new do |s|
     "lib/survey.rb",
     "spec/dataline_spec.rb",
     "spec/spec_helper.rb",
-    "spec/survey_spec.rb"
+    "spec/survey_spec.rb",
+    "wahlrecht_de.gemspec"
   ]
   s.homepage = "http://github.com/Tobi-Fankhaenel/wahlrecht_de"
   s.licenses = ["MIT"]
