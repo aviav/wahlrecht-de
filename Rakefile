@@ -14,13 +14,18 @@ require 'rake'
 require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
-  gem.name = "wahlrecht-de"
-  gem.homepage = "http://github.com/Tobi-Fankhaenel/wahlrecht-de"
+  gem.name = "wahlrecht_de"
+  gem.homepage = "http://github.com/Tobi-Fankhaenel/wahlrecht_de"
   gem.license = "MIT"
   gem.summary = %Q{Provides summary analysis of current poll results from wahlrecht.de}
-  gem.description = %Q{Provides summary analysis of current poll results from wahlrecht.de}
+  gem.description = File.read(File.join(File.dirname(__FILE__), 'README.rdoc'))
   gem.email = "fank1@gmx.de"
-  gem.authors = ["fank1"]
+  gem.authors = ["Tobi Fankhänel"]
+  gem.platform = Gem::Platform::RUBY
+  gem.required_ruby_version = '>=2.0'
+  gem.files = Dir['**/**']
+  gem.executables = [ 'wahlrecht_de' ]
+  gem.has_rdoc = true
   # dependencies defined in Gemfile
 end
 Jeweler::RubygemsDotOrgTasks.new
@@ -43,7 +48,7 @@ Rake::RDocTask.new do |rdoc|
   version = File.exist?('VERSION') ? File.read('VERSION') : ""
 
   rdoc.rdoc_dir = 'rdoc'
-  rdoc.title = "wahlrecht-de #{version}"
+  rdoc.title = "wahlrecht_de #{version}"
   rdoc.rdoc_files.include('README*')
   rdoc.rdoc_files.include('lib/**/*.rb')
 end
