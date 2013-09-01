@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = "wahlrecht_de"
-  s.version = "0.1.0"
+  s.version = "0.2.0"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Tobi Fankh\u{e4}nel"]
-  s.date = "2013-08-28"
+  s.date = "2013-09-01"
   s.description = "= wahlrecht_de\n\nProvides summary analysis of current poll results from wahlrecht.de\n\n== Contributing to wahlrecht_de\n \n* Check out the latest master to make sure the feature hasn't been implemented or the bug hasn't been fixed yet.\n* Check out the issue tracker to make sure someone already hasn't requested it and/or contributed it.\n* Fork the project.\n* Start a feature/bugfix branch.\n* Commit and push until you are happy with your contribution.\n* Make sure to add tests for it. This is important so I don't break it in a future version unintentionally.\n* Please try not to mess with the Rakefile, version, or history. If you want to have your own version, or is otherwise necessary, that is fine, but please isolate to its own commit so I can cherry-pick around it.\n\n== Copyright\n\nCopyright (c) 2013 Tobi Fankh\u{e4}nel. See LICENSE.txt for\nfurther details.\n\n"
   s.email = "fank1@gmx.de"
   s.executables = ["wahlrecht_de"]
@@ -66,6 +66,7 @@ Gem::Specification.new do |s|
     "doc/rdoc.css",
     "doc/table_of_contents.html",
     "lib/dataline.rb",
+    "lib/datapoint.rb",
     "lib/runner.rb",
     "lib/survey.rb",
     "spec/dataline_spec.rb",
