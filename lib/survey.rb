@@ -15,17 +15,7 @@ module WahlrechtDe
 
 		def parse index
 			row = @rows[index]
-			row_data = parse_rowdata row
-			@datalines.push(Dataline.new(row.at_xpath("th/text()").to_s, row_data))
-		end
-
-		def parse_rowdata row
-			row_data = []
-			datas = row.xpath("td")
-			datas.each do |data|
-				row_data.push(data.at_xpath("text()").to_s)
-			end
-			row_data
+			@datalines.push Dataline.new row
 		end
 
 		def to_s
