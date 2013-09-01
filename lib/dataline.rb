@@ -1,21 +1,24 @@
+require_relative 'datapoint'
+
 module WahlrechtDe
 	class Dataline
 
-		def initialize name, prognosis
-			@name = name
-			@prognosis = format_prognosis prognosis
+		def initialize row
+			@name = row.at_xpath("th/text()").to_s
+			@prognosis = parse_rowdata row
 		end
 
-		def format_prognosis prognosis
-			prognosis.pop
-			prognosis = prognosis - ["", "&#8211;"]
-			prognosis.each do |datapoint| format_datapoint datapoint end
-		end
-
-		def format_datapoint datapoint
-			datapoint.sub! ",", "."
-			datapoint.chomp! " %"
-			datapoint.chomp! ".0"
+		def parse_rowdata row
+			row_data = []
+			datas = row.xpath("td")
+			datas.pop
+			datas.each do |data|
+				string_data = data.at_xpath("text()").to_s
+				unless (string_data == "" or string_data == "&#8211;")
+					row_data.push Datapoint.new string_data
+				end
+			end
+			row_data
 		end
 
 		def prognosis_range
