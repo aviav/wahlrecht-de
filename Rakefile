@@ -15,12 +15,12 @@ require 'jeweler'
 Jeweler::Tasks.new do |gem|
   # gem is a Gem::Specification... see http://docs.rubygems.org/read/chapter/20 for more options
   gem.name = "wahlrecht_de"
-  gem.homepage = "http://github.com/Tobi-Fankhaenel/wahlrecht_de"
+  gem.homepage = "http://github.com/aviav/wahlrecht_de"
   gem.license = "MIT"
   gem.summary = %Q{Provides summary analysis of current poll results from wahlrecht.de}
   gem.description = File.read(File.join(File.dirname(__FILE__), 'README.rdoc'))
-  gem.email = "fank1@gmx.de"
-  gem.authors = ["Tobi Fankhänel"]
+  gem.email = "8aviav@gmail.com"
+  gem.authors = ["aviav"]
   gem.platform = Gem::Platform::RUBY
   gem.required_ruby_version = '>=2.0'
   gem.files = Dir['**/**']
